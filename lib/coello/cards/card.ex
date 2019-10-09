@@ -5,7 +5,6 @@ defmodule Coello.Cards.Card do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "cards" do
-    field :c, :string
     field :description, :string
     field :order, :integer
     field :title, :string
@@ -16,7 +15,7 @@ defmodule Coello.Cards.Card do
   @doc false
   def changeset(card, attrs) do
     card
-    |> cast(attrs, [:order, :title, :description, :c])
-    |> validate_required([:order, :title, :description, :c])
+    |> cast(attrs, [:order, :title, :description])
+    |> validate_required([:order, :title, :description])
   end
 end

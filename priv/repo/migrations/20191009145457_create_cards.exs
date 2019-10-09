@@ -7,7 +7,6 @@ defmodule Coello.Repo.Migrations.CreateCards do
       add :order, :integer
       add :title, :string
       add :description, :string
-      add :c, :string
 
       timestamps()
     end
