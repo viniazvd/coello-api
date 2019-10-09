@@ -13,7 +13,13 @@ defmodule CoelloWeb.Schema do
     end
   end
 
-  # mutation do end
+  mutation do
+    @docs "create user"
+    field :create_user, type: :user_type do
+      arg(:input, non_null(:user_input_type))
+      resolve(&Resolvers.UserResolver.create_user/3)
+    end
+  end
 
   # subscription do end
 end
