@@ -4,7 +4,6 @@ defmodule CoelloWeb.Graphql.Types.UserType do
   object :user_type do
     field :id, :id
     field :email, :string
-    field :password, :string
     field :last_name, :string
     field :first_name, :string
     field :role, :string
