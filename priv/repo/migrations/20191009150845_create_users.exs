@@ -7,7 +7,7 @@ defmodule Coello.Repo.Migrations.CreateUsers do
       add :email, :string
       add :first_name, :string
       add :last_name, :string
-      add :password, :string
+      add :password_hash, :string
       add :photo, :string
       add :initials, :string
       add :details, :string
