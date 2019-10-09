@@ -13,7 +13,7 @@ defmodule CoelloWeb.Router do
     forward("/graphql", Absinthe.Plug, schema: CoelloWeb.Schema)
 
     # graphql playground
-    if Mix.env() == "dev" do
+    if Mix.env() == :dev do
       forward("/graphiql", Absinthe.Plug.GraphiQL, schema: CoelloWeb.Schema)
     end
     # get "/users", UserController, :index
