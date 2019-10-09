@@ -2,6 +2,7 @@ defmodule CoelloWeb.Schema do
   use Absinthe.Schema
 
   # import types
+  import_types(CoelloWeb.Graphql.Types)
 
   query do
 
