@@ -21,7 +21,6 @@ defmodule CoelloWeb do
       use Phoenix.Controller, namespace: CoelloWeb
 
       import Plug.Conn
-      import CoelloWeb.Gettext
       alias CoelloWeb.Router.Helpers, as: Routes
     end
   end
@@ -37,7 +36,6 @@ defmodule CoelloWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CoelloWeb.Gettext
     end
   end
 
