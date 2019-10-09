@@ -21,6 +21,10 @@ defmodule Coello.Users.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:email, :first_name, :last_name, :password, :photo, :initials, :details, :role])
-    |> validate_required([:email, :first_name, :last_name, :password, :photo, :initials, :details, :role])
+    |> validate_required([:email, :first_name, :last_name, :password, :role])
+    |> validate_format(:email, ~r/@/) # TODO: improve email validation
+    |> validate_length(:password, min: 6)
+    |> update_change(:email, &String.downcase(&1))
+    |> unique_constraint(:email)
   end
 end
