@@ -1,7 +1,7 @@
 defmodule CoelloWeb.Schema do
   use Absinthe.Schema
 
-  alias CoelloWeb.Graphql.Resolvers
+  alias CoelloWeb.Schema.Resolvers
 
   # import types
   import_types(CoelloWeb.Schema.Types.Index)
@@ -9,7 +9,7 @@ defmodule CoelloWeb.Schema do
   query do
     @docs "user list"
     field :users, list_of(:user_type) do
-      resolve(&Resolvers.UserResolver.user/3)
+      resolve(&Resolvers.UserResolver.users/3)
     end
   end
 
