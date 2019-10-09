@@ -39,7 +39,10 @@ defmodule Coello.MixProject do
       {:ecto_sql, "~> 3.1"},
       {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:absinthe, "~> 1.4.13"},
+      {:absinthe_plug, "~> 1.4.5"},
+      {:absinthe_ecto, "~> 0.1.3"}
     ]
   end
 
