@@ -5,14 +5,14 @@ defmodule Coello.Users.User do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "users" do
-    field :details, :string
+    field :details, :string, unique: true
     field :email, :string
     field :first_name, :string
     field :initials, :string
     field :last_name, :string
     field :password, :string
     field :photo, :string
-    field :role, :string
+    field :role, :string, default: "user"
 
     timestamps()
   end
