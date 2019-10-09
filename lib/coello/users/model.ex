@@ -10,7 +10,8 @@ defmodule Coello.Users.Model do
     field :first_name, :string
     field :initials, :string
     field :last_name, :string
-    field :password, :string
+    field :password, :string, virtual: true
+    field :password_hash, :string
     field :photo, :string
     field :role, :string, default: "user"
 
@@ -26,5 +27,14 @@ defmodule Coello.Users.Model do
     |> validate_length(:password, min: 6)
     |> update_change(:email, &String.downcase(&1))
     |> unique_constraint(:email)
+    |> put_password_hash
   end
+
+  defp put_password_hash(
+         %Ecto.Changeset{valid?: true, changes: %{password: password}} = changeset
+       ) do
+    change(changeset, Bcrypt.add_hash(password))
+  end
+
+  defp put_password_hash(changeset), do: changeset
 end
