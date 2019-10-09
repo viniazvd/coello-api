@@ -1,10 +1,10 @@
-defmodule CoelloWeb.Schema do
+defmodule CoelloWeb.Graphql do
   use Absinthe.Schema
 
-  alias CoelloWeb.Schema.Resolvers
+  alias CoelloWeb.Graphql.Resolvers
 
   # import types
-  import_types(CoelloWeb.Schema.Types.Index)
+  import_types(CoelloWeb.Graphql.Types.Index)
 
   query do
     @docs "user list"
