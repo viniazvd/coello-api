@@ -1,4 +1,4 @@
-defmodule CoelloWeb.Schema.Resolvers.UserResolver do
+defmodule CoelloWeb.Graphql.Resolvers.UserResolver do
   alias Coello.Users.Controller, as: UserController
 
   def users(_,_,_) do

@@ -1,4 +1,4 @@
-defmodule CoelloWeb.Schema.Types.UserType do
+defmodule CoelloWeb.Graphql.Types.UserType do
   use Absinthe.Schema.Notation
 
   object :user_type do
