@@ -1,11 +1,11 @@
 defmodule CoelloWeb.Graphql.Resolvers.UserResolver do
-  alias Coello.Users.Controller, as: UserController
+  alias Coello.Users.Services, as: UserServices
 
   def users(_,_,_) do
-    {:ok, UserController.list_users()}
+    {:ok, UserServices.list_users()}
   end
 
   def create_user(_,%{input: input},_) do
-    UserController.create_user(input)
+    UserServices.create_user(input)
   end
 end
