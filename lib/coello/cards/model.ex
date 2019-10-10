@@ -1,6 +1,7 @@
 defmodule Coello.Cards.Model do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Coello.Tags.Model, as: Tags
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
@@ -8,11 +9,11 @@ defmodule Coello.Cards.Model do
     field :description, :string
     field :order, :integer
     field :title, :string
+    has_many :tags, Tags
 
     timestamps()
   end
 
-  @doc false
   def changeset(card, attrs) do
     card
     |> cast(attrs, [:order, :title, :description])

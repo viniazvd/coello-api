@@ -8,8 +8,9 @@ defmodule Coello.Repo.Migrations.CreateCards do
       add :title, :string
       add :description, :string
 
+      add :tag_id, references(:tags)
+
       timestamps()
     end
-
   end
 end
