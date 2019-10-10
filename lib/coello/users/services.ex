@@ -1,4 +1,4 @@
-defmodule Coello.Users.Controller do
+defmodule Coello.Users.Services do
   @moduledoc """
   The Users context.
   """

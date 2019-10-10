@@ -1,4 +1,4 @@
-defmodule Coello.Auth.Controller do
+defmodule Coello.Auth.Services do
   alias Coello.Users.Model, as: User
   alias Coello.Repo
 

@@ -1,4 +1,4 @@
-defmodule Coello.Cards.Controller do
+defmodule Coello.Cards.Services do
   @moduledoc """
   The Cards context.
   """
