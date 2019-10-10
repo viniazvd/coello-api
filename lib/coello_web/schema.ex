@@ -19,6 +19,12 @@ defmodule CoelloWeb.Graphql do
       arg(:input, non_null(:user_input_type))
       resolve(&Resolvers.UserResolver.create_user/3)
     end
+
+    @docs "auth => return token(jwt)"
+    field :auth_user, type: :auth_type do
+      arg(:input, non_null(:auth_input_type))
+      resolve(&Resolvers.AuthResolver.auth_user/3)
+    end
   end
 
   # subscription do end
