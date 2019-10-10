@@ -3,6 +3,7 @@ defmodule CoelloWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug(CoelloWeb.Plugs.Context)
   end
 
   scope "/api/v1" do
@@ -16,7 +17,6 @@ defmodule CoelloWeb.Router do
     if Mix.env() == :dev do
       forward("/graphiql", Absinthe.Plug.GraphiQL, schema: CoelloWeb.Graphql)
     end
-    # get "/users", UserController, :index
   end
 end
 
