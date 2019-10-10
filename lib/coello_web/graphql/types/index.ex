@@ -1,8 +1,8 @@
 defmodule CoelloWeb.Graphql.Types.Index do
   use Absinthe.Schema.Notation
 
-  # TODO: create alias
+  alias CoelloWeb.Graphql.Types.{UserType, AuthType}
 
-  import_types(CoelloWeb.Graphql.Types.UserType)
-  import_types(CoelloWeb.Graphql.Types.AuthType)
+  import_types(UserType)
+  import_types(AuthType)
 end
