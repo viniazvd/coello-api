@@ -2,6 +2,7 @@ defmodule CoelloWeb.Graphql do
   use Absinthe.Schema
 
   alias CoelloWeb.Graphql.Resolvers
+  alias CoelloWeb.Graphql.Middleware
 
   # import types
   import_types(CoelloWeb.Graphql.Types.Index)
@@ -9,6 +10,7 @@ defmodule CoelloWeb.Graphql do
   query do
     @docs "user list"
     field :users, list_of(:user_type) do
+      middleware(Middleware.Authorize, :any)
       resolve(&Resolvers.UserResolver.users/3)
     end
   end
