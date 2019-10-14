@@ -3,6 +3,7 @@ defmodule Coello.Cards.Model do
   import Ecto.Changeset
 
   alias Coello.Tags.Model, as: Tags
+  alias Coello.Links.Model, as: Links
   alias Coello.Comments.Model, as: Comments
   alias Coello.Attachments.Model, as: Attachments
 
@@ -14,6 +15,7 @@ defmodule Coello.Cards.Model do
     field :title, :string
 
     many_to_many :tags, Tags, join_through: "cards_tags"
+    has_many :links, Links
     has_many :comments, Comments
     has_many :attachments, Attachments
 
