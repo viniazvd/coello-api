@@ -9,7 +9,8 @@ defmodule Coello.Cards.Model do
     field :description, :string
     field :order, :integer
     field :title, :string
-    has_many :tags, Tags
+
+    many_to_many :tags, Tags, join_through: "cards_tags"
 
     timestamps()
   end

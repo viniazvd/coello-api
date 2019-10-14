@@ -9,12 +9,11 @@ defmodule Coello.Tags.Model do
     field :type, :string
     field :color, :string
 
-    belongs_to :cards, Cards
+    many_to_many :cards, Cards, join_through: "cards_tags"
 
     timestamps()
   end
 
-  @doc false
   def changeset(tag, attrs) do
     tag
     |> cast(attrs, [:type, :color])
