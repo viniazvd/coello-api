@@ -1,6 +1,7 @@
 defmodule Coello.Tags.Model do
   use Ecto.Schema
   import Ecto.Changeset
+
   alias Coello.Cards.Model, as: Cards
 
   @primary_key {:id, :binary_id, autogenerate: true}
