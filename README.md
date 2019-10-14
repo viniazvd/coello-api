@@ -11,8 +11,7 @@ Now you can visit [`localhost:4000/api/v1/graphiql`](http://localhost:4000/api/v
 # querys/mutations
 https://gist.github.com/viniazvd/79a61f065af0eb193b58a156b54df752
 
-# structure
-# special thanks: 
+# structure (**special thanks:**) 
 - @stephanie_bang 
 - @tamara_cavalcanti
 <br>
