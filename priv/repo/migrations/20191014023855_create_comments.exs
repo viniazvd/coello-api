@@ -2,11 +2,11 @@ defmodule Coello.Repo.Migrations.CreateComments do
   use Ecto.Migration
 
   def change do
-    create table(:comments, primary_key: false) do
-      add :id, :binary_id, primary_key: true
-      add :text, :string
+    create table(:comments) do
+      add :comment, :string
 
       add :card_id, references(:cards)
+      add :user_id, references(:users)
 
       timestamps()
     end

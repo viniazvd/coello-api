@@ -2,7 +2,7 @@ defmodule Coello.Repo.Migrations.CardsTags do
   use Ecto.Migration
 
   def change do
-    create table(:cards_tags, primary_key: false) do
+    create table(:cards_tags) do
       add :card_id, references(:cards)
       add :tag_id, references(:tags)
     end

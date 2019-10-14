@@ -2,11 +2,11 @@ defmodule Coello.Repo.Migrations.CreateAttachments do
   use Ecto.Migration
 
   def change do
-    create table(:attachments, primary_key: false) do
-      add :id, :binary_id, primary_key: true
+    create table(:attachments) do
       add :file, :string
 
       add :card_id, references(:cards)
+      add :user_id, references(:users)
 
       timestamps()
     end

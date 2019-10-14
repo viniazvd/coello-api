@@ -3,20 +3,22 @@ defmodule Coello.Comments.Model do
   import Ecto.Changeset
 
   alias Coello.Cards.Model, as: Cards
+  alias Coello.Users.Model, as: Users
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "comments" do
-    field :text, :string
+    field :comment, :string
 
-    belongs_to :card, Cards
+    belongs_to :cards, Cards
+    belongs_to :users, Users
 
     timestamps()
   end
 
   def changeset(comments, attrs) do
     comments
-    |> cast(attrs, [:text])
-    |> validate_required([:text])
+    |> cast(attrs, [:comment])
+    |> validate_required([:comment])
   end
 end
