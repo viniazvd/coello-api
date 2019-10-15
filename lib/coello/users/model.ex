@@ -18,7 +18,6 @@ defmodule Coello.Users.Model do
     timestamps()
   end
 
-  @doc false
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:email, :first_name, :last_name, :password, :photo, :initials, :details, :role])

@@ -12,7 +12,6 @@ defmodule Coello.Boards do
     timestamps()
   end
 
-  @doc false
   def changeset(boards, attrs) do
     boards
     |> cast(attrs, [:name, :color, :is_private])
