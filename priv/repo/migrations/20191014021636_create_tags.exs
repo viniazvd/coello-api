@@ -1,4 +1,4 @@
-defmodule Coello.Repo.Migrations.Tags do
+defmodule Coello.Repo.Migrations.CreateTags do
   use Ecto.Migration
 
   def change do

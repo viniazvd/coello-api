@@ -1,4 +1,4 @@
-defmodule Coello.Repo.Migrations.Cards do
+defmodule Coello.Repo.Migrations.CreateCards do
   use Ecto.Migration
 
   def change do
