@@ -15,7 +15,7 @@ https://gist.github.com/viniazvd/79a61f065af0eb193b58a156b54df752
 - @stephanie_bang 
 - @tamara_cavalcanti
 <br>
-https://gist.github.com/stephaniebang/197f8b6f3ddaf4b761798890614a588f
+https://docs.google.com/document/d/1_wzQmIr-BYCWEB-cpGwvWD2MJ9HP2MptwuIgViHiRrU/edit?usp=sharing
 
 # UML Diagram
 ![UML](https://i.imgur.com/vlg2Ihn.png)
