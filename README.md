@@ -18,4 +18,4 @@ https://gist.github.com/viniazvd/79a61f065af0eb193b58a156b54df752
 https://docs.google.com/document/d/1_wzQmIr-BYCWEB-cpGwvWD2MJ9HP2MptwuIgViHiRrU/edit?usp=sharing
 
 # UML Diagram
-![UML](https://ibb.co/DVchG6n)
+![UML](https://uploaddeimagens.com.br/imagens/coello-uml-png)
